@@ -1,6 +1,6 @@
 package org.example
 
-fun lcd(number: Int): Array<Array<Char>> {
+fun toLcd(number: Int): Array<Array<Char>> {
     if (2 == number) {
         return arrayOf(
             arrayOf(' ', '_', ' '),
@@ -16,8 +16,9 @@ fun lcd(number: Int): Array<Array<Char>> {
 }
 
 fun main() {
-
-    val display = lcd(2)
+    println("Enter a digit.")
+    val input = readLine()
+    val display = toLcd(input?.toIntOrNull() ?: 1)
     for (line in display) {
         for (c in line) {
             print(c)
