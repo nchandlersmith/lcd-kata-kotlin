@@ -1,9 +1,9 @@
 package org.example.lcd
 
-val emptyLcd: Array<Array<Char>> = arrayOf(emptyArray())
+private val emptyLcd: Array<Array<Char>> = arrayOf(emptyArray())
 
 fun toDigit(number: Int): Array<Array<Char>> {
-    val rules = listOf(digitRule1, digitRule2, digitRule3, digitRule4, digitRule5, digitRule6)
+    val rules = listOf(digitRule1, digitRule2, digitRule3, digitRule4, digitRule5, digitRule6, digitRule7)
     return applyRules(number, rules)
 }
 
@@ -16,6 +16,15 @@ private fun applyRules(number: Int, rules: List<(Int) -> Array<Array<Char>>>): A
         }
     }
     return lcdDigit
+}
+
+private val digitRule7: (Int) -> Array<Array<Char>> = { number ->
+    val digitLcd = arrayOf(
+        arrayOf(' ', '_', ' '),
+        arrayOf(' ', ' ', '|'),
+        arrayOf(' ', ' ', '|')
+    )
+    digitRule(number, 7, digitLcd)
 }
 
 private val digitRule6: (Int) -> Array<Array<Char>> = { number ->
