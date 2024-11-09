@@ -4,6 +4,10 @@ val emptyLcd: Array<Array<Char>> = arrayOf(emptyArray())
 
 fun toDigit(number: Int): Array<Array<Char>> {
     val rules = listOf(digitRule1, digitRule2, digitRule3, digitRule4)
+    return applyRules(number, rules)
+}
+
+private fun applyRules(number: Int, rules: List<(Int) -> Array<Array<Char>>>): Array<Array<Char>> {
     var lcdDigit = emptyLcd
     for (rule in rules) {
         lcdDigit = rule(number)
