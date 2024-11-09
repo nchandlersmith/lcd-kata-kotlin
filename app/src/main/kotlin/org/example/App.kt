@@ -9,9 +9,9 @@ fun toLcd(number: Int): Array<Array<Char>> {
         )
     }
     return arrayOf(
-        arrayOf(' '),
-        arrayOf('|'),
-        arrayOf('|')
+        arrayOf(' ', ' ', ' '),
+        arrayOf(' ', '|', ' '),
+        arrayOf(' ', '|', ' ')
     )
 }
 

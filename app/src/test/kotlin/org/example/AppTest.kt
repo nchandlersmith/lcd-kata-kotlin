@@ -7,9 +7,9 @@ class AppTest: FunSpec({
     test("lcd returns a 1") {
         val result = toLcd(1)
         val expected = arrayOf(
-            arrayOf(' '),
-            arrayOf('|'),
-            arrayOf('|')
+            arrayOf(' ', ' ', ' '),
+            arrayOf(' ', '|', ' '),
+            arrayOf(' ', '|', ' ')
         )
         result shouldBe expected
     }
