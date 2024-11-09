@@ -4,8 +4,8 @@ import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 
 class AppTest: FunSpec({
-    test("lcd returns a 1") {
-        val result = toLcd(1)
+    test("toDigit returns a 1") {
+        val result = toDigit(1)
         val expected = arrayOf(
             arrayOf(' ', ' ', ' '),
             arrayOf(' ', '|', ' '),
@@ -13,8 +13,8 @@ class AppTest: FunSpec({
         )
         result shouldBe expected
     }
-    test("lcd returns a 2") {
-        val result = toLcd(2)
+    test("toDigit returns a 2") {
+        val result = toDigit(2)
         val expected = arrayOf(
             arrayOf(' ', '_', ' '),
             arrayOf(' ', '_', '|'),
