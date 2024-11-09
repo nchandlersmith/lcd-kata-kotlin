@@ -8,4 +8,13 @@ class AppTest: FunSpec({
         val result = App().greeting
         result shouldBe "Hello World!"
     }
+    test("lcd returns a 1") {
+        val result = lcd(1)
+        val expected = arrayOf(
+            arrayOf(" "),
+            arrayOf("|"),
+            arrayOf("|")
+        )
+        result shouldBe expected
+    }
 })
