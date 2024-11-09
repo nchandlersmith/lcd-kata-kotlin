@@ -67,4 +67,22 @@ class DigitKtTest: FunSpec({
         )
         result shouldBe expected
     }
+    test("toDigit returns an 8") {
+        val result = toDigit(8)
+        val expected = arrayOf(
+            arrayOf(' ', '_', ' '),
+            arrayOf('|', '_', '|'),
+            arrayOf('|', '_', '|')
+        )
+        result shouldBe expected
+    }
+    test("toDigit returns a 9") {
+        val result = toDigit(9)
+        val expected = arrayOf(
+            arrayOf(' ', '_', ' '),
+            arrayOf('|', '_', '|'),
+            arrayOf(' ', '_', '|')
+        )
+        result shouldBe expected
+    }
 })
