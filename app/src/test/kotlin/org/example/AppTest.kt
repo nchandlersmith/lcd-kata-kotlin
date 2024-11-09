@@ -22,4 +22,13 @@ class AppTest: FunSpec({
         )
         result shouldBe expected
     }
+    test("toDigit returns a 3") {
+        val result = toDigit(3)
+        val expected = arrayOf(
+            arrayOf(' ', '_', ' '),
+            arrayOf(' ', '_', '|'),
+            arrayOf(' ', '_', '|')
+        )
+        result shouldBe expected
+    }
 })
