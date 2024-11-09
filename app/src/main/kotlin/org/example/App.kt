@@ -1,26 +1,6 @@
 package org.example
 
-fun toDigit(number: Int): Array<Array<Char>> {
-    if (3 == number) {
-        return arrayOf(
-            arrayOf(' ', '_', ' '),
-            arrayOf(' ', '_', '|'),
-            arrayOf(' ', '_', '|')
-        )
-    }
-    if (2 == number) {
-        return arrayOf(
-            arrayOf(' ', '_', ' '),
-            arrayOf(' ', '_', '|'),
-            arrayOf('|', '_', ' ')
-        )
-    }
-    return arrayOf(
-        arrayOf(' ', ' ', ' '),
-        arrayOf(' ', '|', ' '),
-        arrayOf(' ', '|', ' ')
-    )
-}
+import org.example.lcd.toDigit
 
 fun printNumber(number: Array<Array<Char>>) {
     for (line in number) {
