@@ -1,6 +1,6 @@
 package org.example.lcd
 
-fun toDigit(number: Int): Array<Array<Char>> {
+fun toDigitLcd(number: Int): Array<Array<Char>> {
     return lcdMap.getOrElse(number) { arrayOf(emptyArray()) }
 }
 
